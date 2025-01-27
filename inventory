@@ -1,0 +1,8 @@
+[elasticsearch]
+localhost ansible_connection=local ansible_python_interpreter=/Library/Frameworks/Python.framework/Versions/3.12/bin/python3
+
+[elasticsearch:vars]
+env={"PATH": "/usr/local/bin"}
+elasticsearch_host=http://localhost
+elasticsearch_port=9200
+elasticsearch_http_port=9200

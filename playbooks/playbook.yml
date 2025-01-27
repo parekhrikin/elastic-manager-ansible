@@ -1,0 +1,10 @@
+- hosts: elasticsearch
+  roles:
+    - { role: create_index }
+
+  tasks:
+    - name: Print out ansible_virtualization_type value
+      debug:
+        var: ansible_virtualization_type
+      environment:
+        PATH: "{{ env.PATH }}:/sbin:/usr/sbin"

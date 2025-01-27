@@ -1,0 +1,11 @@
+---
+# tasks file for playbooks/roles/create_index
+- name: Create an index called testindex
+  community.elastic.elastic_index:
+    name: test-index-1 # Include this if your module requires `name`
+    api_key_encoded: "ZmRUaHBaUUJCZFNxcjR6WWdMMGM6Y3dSU2hzal9ROW1KSmp4Z1VjZHp6UQ=="
+    cafile: "/Users/rikinparekh/http_ca.crt"
+    state: present
+  environment:
+    PATH: "{{ env.PATH }}:/sbin:/usr/sbin"
+    SOME_VAR: "{{ env }}"
